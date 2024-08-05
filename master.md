@@ -114,7 +114,7 @@ CloudSaver, Inc (January 2022 – Present)
 - Workaround Micronaut OIDC configuration to enable authentication on AKHQ with Okta. 
 - Setup automatic wildcard subdomain routing for white labeling.
 - Configured zero code bridge between AWS Marketplace SNS topic and CloudSaver app in different AWS regions using SNS, SQS, and EventBridge pipes.
--	Bypassed API Gateway 10MB limit using CloudFront with custom OAuth 2.0 authorizer written in Python (with pyJwt) running on Lambda@Edge.
+-	Bypassed API Gateway 10 MB limit using CloudFront with custom OAuth 2.0 authorizer written in Python (with pyJwt) running on Lambda@Edge.
 -	Captured application logs in EKS Fargate to Datadog using sidecar instead of Datadog recommended way of using Lambda.
 -	Refactored Docker image to run in both Lambda and ECS Fargate.
 -	Enabled/disabled CUR obfuscation flow using CloudWatch composite alarm.
@@ -129,7 +129,7 @@ CloudSaver, Inc (January 2022 – Present)
 -	Validated Pull Request source and destination branch to prevent unexpected Git merge in Azure DevOps.
 -	Automated comments in Azure DevOps Pull Request using service hooks and Azure Functions.
 -	Injected private key for custom authorization using jq and Azure DevOps secure files.
--	Created Azure DevOps extension to move work items between swimlanes by using dropdown.
+-	Created Azure DevOps extension to move work items between swim lanes by using dropdown.
 - Automated moving work items associated with completed Pull Request between Kanban board columns.
 -	Created dynamic Kubernetes workers deployment per Kafka topic using Helm, jq, and yq so workers can be scaled independently.
 -	Scheduled pipeline that automatically runs C# script (csx) to pull Azure resource metadata, commit, push, and create Pull Request.
@@ -157,7 +157,7 @@ CloudSaver, Inc (January 2022 – Present)
 **Various**
 -	Assisted with answering technical questions at CloudSaver booth in AWS re:Invent 2022.
 -	Documented various architecture and data flow diagrams using draw.io.
--	Assisted in obtaining SOC 2, ISO 27001, and GDPR compliances.
+-	Assisted in obtaining SOC 2, ISO 27001, and GDPR compliance.
 
 **Software Engineer**\
 CloudSaver, Inc (May 2021 – December 2021)
@@ -215,7 +215,7 @@ CloudSaver Inc. (August 2019 – May 2021)
 -	Created SQL Server stored procedure with Table-Valued Parameters to generate complex reports.
 -	Improved EF batch insert performance by utilizing SqlBulkCopy.
 -	Enabled consistent database schema migrations using EF 6 (Entity Framework) Migrations.
--	Implemented Elasticsearch to store and improve query speed of client's AWS CUR/Invoice data.
+-	Implemented Elasticsearch to store and improve query speed of AWS CUR/Invoice data.
 -	Set up Amazon DocumentDB as a storage to store status and configuration for batch applications.
 
 **DevOps**
