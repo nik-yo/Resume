@@ -201,6 +201,36 @@ CloudSaver, Inc (May 2021 – December 2021)
 -	Decoupled shared code from batch applications by moving it to a Nuget package.
 -	Resolved issue with TLS 1.2 between newer Linux kernel and MySQL by re-enabling older cipher suites.
 
+**Consultant**\
+CloudSaver Inc. (August 2019 – May 2021)
+
+**Cloud**
+- Implemented EBS Safety Net feature using Amazon CloudWatch alarms and Amazon SNS.
+-	Designed and performed Amazon S3 Bundling PoC for client.
+-	Automated creation and sharing of AMI Golden Image with partner.
+-	Automated benchmarking of EC2 using Aida 64 and Geekbench with custom AMI.
+-	Configured Site-to-Site VPN to client environment.
+
+**Database**
+-	Created SQL Server stored procedure with Table-Valued Parameters to generate complex reports.
+-	Improved EF batch insert performance by utilizing SqlBulkCopy.
+-	Enabled consistent database schema migrations using EF 6 (Entity Framework) Migrations.
+-	Implemented Elasticsearch to store and improve query speed of client's AWS CUR/Invoice data.
+-	Set up Amazon DocumentDB as a storage to store status and configuration for batch applications.
+
+**DevOps**
+-	Implemented CI/CD pipelines using Azure DevOps and AWS CodeDeploy with deployment to EC2 and Lambda.
+
+**Programming**
+-	Implemented drag and drop report filter with level indentation.
+-	Automated migration of previous generation Amazon EC2 with Xen hypervisor to newer AWS Nitro hypervisor:
+    -	Converted instances from PV (Paravirtual) to HVM (Hardware Virtual Machine)
+    -	Installed NVMe driver and ENA (Enhance Network Adapter) module on the instance
+    -	Fixed fstab for Linux
+-	Created a Razor page based internal web application to query New Relic API using GraphQL.
+-	Automated moving of data to smaller AWS EBS volumes using shell script, PowerShell and AWS SSM for various OS.
+-	Integrated SAML 2.0 SSO handling using Sustainsys/SAML2 library on CloudSaver web application for Okta, OneLogin and Ping Identity.
+
 **Web Application Developer**\
 WorkView, LLC. (August 2017 – August 2019)
 -	Developed and released WorkView mobile app for iOS and Android with ASP.NET Web API backend.
