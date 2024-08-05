@@ -16,6 +16,7 @@ type TemplateValue struct {
 	AfterAug2012 bool
 	AfterJul2011 bool
 	AfterAug2008 bool
+	Top5         bool
 }
 
 func getDatetime(datetimeString string) time.Time {
@@ -53,7 +54,22 @@ func main() {
 	// }
 	output, err := os.Create(outputFile)
 
+	//*** Recent ***
 	textTmpl, err := template.New(tFile).ParseFiles(tFile)
+	if err != nil {
+		panic(err)
+	}
+	err = textTmpl.Execute(output, tValue)
+	if err != nil {
+		panic(err)
+	}
+
+	//*** Recent Top 5 ***
+	outputFile = "recent_top5.md"
+	tValue.Top5 = true
+
+	output, err = os.Create(outputFile)
+	textTmpl, err = template.New(tFile).ParseFiles(tFile)
 	if err != nil {
 		panic(err)
 	}
