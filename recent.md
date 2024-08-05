@@ -104,7 +104,7 @@ FinOps Certified Engineer
 **Oracle Cloud Infrastructure 2024** Generative AI Certified Professional
 
 ## Work Experience
-{{ if .AfterJan2022 }}
+
 **Director of Cloud and DevOps (Cloud Ops Engineer)**\
 CloudSaver, Inc (January 2022 – Present)
 
@@ -159,8 +159,8 @@ CloudSaver, Inc (January 2022 – Present)
 -	Assisted with answering technical questions at CloudSaver booth in AWS re:Invent 2022.
 -	Documented various architecture and data flow diagrams using draw.io.
 -	Assisted in obtaining SOC 2, ISO 27001, and GDPR compliance.
-{{ end }}
-{{ if .AfterMay2021 }}
+
+
 **Software Engineer**\
 CloudSaver, Inc (May 2021 – December 2021)
 
@@ -202,8 +202,8 @@ CloudSaver, Inc (May 2021 – December 2021)
 -	Used Handlebar.NET to map database bootstrap script with data from AWS secrets manager.
 -	Decoupled shared code from batch applications by moving it to a Nuget package.
 -	Resolved issue with TLS 1.2 between newer Linux kernel and MySQL by re-enabling older cipher suites.
-{{ end }}
-{{ if .AfterAug2019 }}
+
+
 **Consultant**\
 CloudSaver Inc. (August 2019 – May 2021)
 
@@ -233,8 +233,8 @@ CloudSaver Inc. (August 2019 – May 2021)
 -	Created a Razor page based internal web application to query New Relic API using GraphQL.
 -	Automated moving of data to smaller AWS EBS volumes using shell script, PowerShell and AWS SSM for various OS.
 -	Integrated SAML 2.0 SSO handling using Sustainsys/SAML2 library on CloudSaver web application for Okta, OneLogin and Ping Identity.
-{{ end }}
-{{ if .AfterAug2017 }}
+
+
 **Web Application Developer**\
 WorkView, LLC. (August 2017 – August 2019)
 -	Developed and released WorkView mobile app for iOS and Android with ASP.NET Web API backend.
@@ -242,30 +242,10 @@ WorkView, LLC. (August 2017 – August 2019)
 -	Added functionality to manage meetings and appointments using Exchange Web Services (EWS).
 -	Created Gantt chart of projects and tasks programmatically using DayPilot Gantt.
 -	Automated file copying after code compilation/build using MSBuild.
-{{ end }}
-{{ if .AfterAug2012 }}
-**GUI Programmer**\
-Data Center Inc. (August 2012 – August 2017)
--	Developed multiple ASP.NET Web Forms sub applications, including Vendor Management and DCI University.
--	Enabled chat capability for customer service department by implementing SightMax chat.
--	Added ability to web application to generate fillable PDF documents using dbAutotrack PDF-Writer.NET.
--	Created image viewer control in HTML5 to replace its Silverlight counterpart.
--	Refactored File Handler application logic to enable automatic XML serialization and deserialization.
-{{ end }}
-{{ if .AfterJul2011 }}
-**Production Tech**\
-Envision, Inc. through Labor Finders (July 2011 – August 2012)
--	Developed a custom MRP application using Windows Forms in C#.NET on Visual Studio 2008.
--	Utilized Microsoft Access as data storage for custom MRP application.
--	Synchronized data in Microsoft Access with SQL Server using Windows Service.
-{{ end }}
-{{ if .AfterAug2008 }}
-**Graduate Research Assistant**\
-Finance, Real Estate & Decision Sciences Department at WSU (August 2008 – May 2011)
--	Queried real estate data from RETS compliance network servers using SQL via ODBC connection.
--	Developed statistical analysis programs using STATA to analyze periodic real estate data.
--	Automated reports generation in Microsoft Excel by creating macros in VBA.
-{{ end }}
+
+
+
+
 
 ## Education
 **Master of Science in Computer Science**\
