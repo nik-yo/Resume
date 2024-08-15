@@ -70,7 +70,7 @@ Forever, Nodemon, Putty, RDP, SSH, WinSCP, WSL
 Azure DevOps, BitBucket, Git, GitHub, PVCS, Sourcetree, TFVC
 
 **Web**\
-ASP.NET (MVC, Razor Pages, Web Forms, Web API), Bootstrap, CSS, DataTables, Express.js, HTML, HTML Agility Pack (HAP), JavaScript, jQuery, Mantine, Next.js, Nginx, Node.js, Nuxt.js, OWIN, Orval, Postman, React, React router, React Bootstrap, REST, Serve, Silverlight, Swagger (Open API), Telerik UI, TypeScript, Vite, Vue.js, WCF, WordPress
+ASP.NET (MVC, Razor Pages, Web Forms, Web API), Bootstrap, CSS, DataTables, Express.js, HTML, HTML Agility Pack (HAP), JavaScript, jQuery, Mantine, Next.js, Nginx, Node.js, Nuxt.js, OWIN, Orval, Postman, React, ReactJS, React router, React Bootstrap, REST, Serve, Silverlight, Swagger (Open API), Telerik UI, TypeScript, Vite, Vue.js, WCF, WordPress
 
 ## Technical Certifications
 **AWS**\
@@ -113,54 +113,84 @@ FinOps Certified Engineer
 ## Work Experience
 
 **Director of Cloud and DevOps (Cloud Ops Engineer)**\
-CloudSaver, Inc (January 2022 – Present)
+CloudSaver, Inc. (January 2022 – Present)
 
 **Cloud**
+- Created a process to launch Cloudsaver on client's AWS commercial and GovCloud accounts.
+- Automated shutting down and starting resources using AWS Lambda and Event Bridge.
+- Setup multiple environment using EKS, MSK, Aurora, Elasticache Redis, OpenSearch, API Gateway, etc.
 - Wrote custom OAuth 2.0 authorizer running on Lambda for API Gateway.
+- Configured Ingress-Nginx controller with AWS NLB for EKS and Azure Load Balancer for AKS.
+- Configured Glue crawler, Athena and Lambda for Operations team to query invoice data.
+- Moved EMR Phoenix backend storage from S3 (EMRFS) to HDFS to improve query performance.
 - Configured private connection to Elasticsearch cluster with VPC endpoint and private hosted zone.
 - Workaround Micronaut OIDC configuration to enable authentication on AKHQ with Okta. 
+- Resolve intermittent Aurora RDS database crash.
+- Dual-hosted CloudSaver front end app on Azure Static Web App and AWS EKS.
 - Setup automatic wildcard subdomain routing for white labeling.
-- Configured zero code bridge between AWS Marketplace SNS topic and CloudSaver app in different AWS regions using SNS, SQS, and EventBridge pipes.
+- Configured cross-region cross-account zero-code bridge from AWS Marketplace SNS to CloudSaver app using SNS, SQS, and EventBridge pipes.
+- Processed Azure CUR data daily using Azure Functions and Azure Synapse Analytics with Spark pool.
+- Remediated issues to meet CIS 1.4.0. for AWS Foundational Technical Review (FTR).
 -	Captured application logs in EKS Fargate to Datadog using sidecar instead of Datadog recommended way of using Lambda.
+- Capture APM data and application logs in EKS Nodegroup using Datadog daemonset via unix socket.
+- Correlated logs and traces in Datadog by formatting application logs as json.
 -	Refactored Docker image to run in both Lambda and ECS Fargate.
 -	Enabled/disabled CUR obfuscation flow using CloudWatch composite alarm.
+- Updated CUR obfuscation process to use S3 event notification, SQS, and EMR serverless.
 -	Automated test file creation and upload using Lambda-backed CloudFormation custom resource when launching resources.
 -	Switched Transit Gateway to VPC peering to save data processing cost.
--	Enabled submission of dependencies and multiple python files to EMR serverless using both Python virtual environment and PySpark Native Features.
+-	Submitted dependencies and multiple python files to EMR serverless using both Python virtual environment and PySpark Native Features.
 -	Implemented cluster and application autoscaler for WordPress in ECS.
 -	Saved $10,000/month by removing redundancy on legacy application.
+- Resolved Aurora MySQL issue due to deadlock caused by index creation.
+- Configured pseudo blue/green deployment for API deployment in EKS.
 -	Saved $15,000/week by moving CUR ingestion from EKS Fargate to EKS Nodegroup in public subnet.
--	Bypassed API Gateway 10 MB limit using CloudFront with custom OAuth 2.0 authorizer written in Python (with pyJwt) running on Lambda@Edge.
+-	Bypassed API Gateway 10 MB limit using CloudFront with Python (with pyJwt) custom authorizer running on Lambda@Edge.
 
 **DevOps**
-- Deployed React front end to both Azure Static Web App and AWS EKS.
 -	Validated Pull Request source and destination branch to prevent unexpected Git merge in Azure DevOps.
 -	Automated comments in Azure DevOps Pull Request using service hooks and Azure Functions.
 -	Injected private key for custom authorization using jq and Azure DevOps secure files.
 -	Created Azure DevOps extension to move work items between swim lanes by using dropdown.
-- Automated moving work items associated with completed Pull Request between Kanban board columns.
+- Automated moving work items on completed Pull Request between Kanban board columns using Azure Functions.
 -	Setup Gated build to validate build before Git merge.
+- Implemented GitOps to AWS with change set to prevent unintended change on production stacks.
+- Optimized build time by building front and backend in parallel.
 -	Created dynamic Kubernetes workers deployment per Kafka topic using Helm, jq, and yq so workers can be scaled independently.
--	Scheduled pipeline that automatically runs C# script (csx) to pull Azure resource metadata, commit, push, and create Pull Request.
+-	Scheduled pipeline that automatically runs C# script (csx), commit, push, and create Pull Request.
 
 **Programming**
+- Created Cloudsaver CLI using Python, setuptools, and Click.
 -	Developed Visual Studio Extension to change the environment that local applications point to.
 -	Wrote bash and PowerShell scripts to connect AWS accounts and Azure subscriptions to CloudSaver app.
--	Wrote applications to apply schema migration to all tables using idempotent EF script export, S3 event, Lambdas, and SQS.
+-	Applied schema migration to all tables using idempotent EF script export, S3 event, Lambdas, and SQS.
 -	Update Visual Studio Extension to encrypt/decrypt value with DialogWindow, ToolWindow, and WPF.
 -	Saved $7,000/week by refactoring .NET 7 application to run on Linux ECS container.
+- Debugged running .NET 7 application using Visual Studio remote debugger.
 -	Developed a web page on CloudSaver app to enable self-configure SSO using React and ASP.NET Web API backend.
 
 **System**
 -	Migrated OpenVPN configuration to new servers.
+- Resolved OpenVPN issue where config failed validation but was saved and caused the web interface to be unreachable.
 -	Setup KEDA to enable pod scaling in Kubernetes (EKS) based on data from CloudWatch.
 -	Enabled monitoring of Kubernetes pods by injecting Dynatrace agents into CloudSaver pods.
+- Troubleshot HBase/Phoenix error by using hbck to check for table inconsistencies.
+- Configured Fargate logging to send application logs in Kubernetes (EKS) to CloudWatch Logs.
+- Configured Jaeger to run in Kubernetes (EKS) in ECS Fargate with and without agent sidecar and OpenSearch as storage.
+- Configured Amazon Container Insight using AWS Distro for Open Telemetry (ADOT) in EKS.
+- Implemented auto memory dump usng Kubernetes preStop lifecycle.
 -	Configured application to export telemetry data directly to Jaeger collector removing the need for sidecar.
 -	Patched .NET 6 vulnerability that's no longer fixed using .NET 8 docker image and .NET 6 runtime.
 -	Bypassed CoreDNS 5s bug issue by routing pod-to-pod traffic through Ingress.
-- Configured Datadog APM by launching Datadog agent as sidecar for EKS Fargate and correlated between traces and logs.
-- Use Datadog operator to capture application traces in EKS Nodegroup.
 - Fixed issue with Docker Desktop used significant amount of memory.
+
+**Staff**
+- Wrote script to simplified memory dump capture and upload to S3.
+- Implemented an auto restart pipeline in ADO.
+- Migrated OpenSearch indices to a different cluster using replication.
+- Implemented cluster autoscaler on EKS Nodegroup.
+- Captured application logs in EKS Nodegroup.
+- Added container insights for EKS through add-on.
 
 **Various**
 -	Assisted with answering technical questions at CloudSaver booth in AWS re:Invent 2022.
@@ -168,16 +198,16 @@ CloudSaver, Inc (January 2022 – Present)
 -	Assisted in obtaining SOC 2, ISO 27001, and GDPR compliance.
 
 **Software Engineer**\
-CloudSaver, Inc (May 2021 – December 2021)
+CloudSaver, Inc. (May 2021 – December 2021)
 
 **Auth**
 -	Setup SAML 2.0 SSO for clients who use Okta, PingFederate, and Azure in Auth0.
--	Fulfilled client security requirements by enabling SLO (Single Log Out) between Auth0 and PingFederate.
+-	Fulfilled client security requirements by enabling Single Logout (SLO) between Auth0 and PingFederate.
 -	Updated from built-in authentication to OpenID and OAuth 2.0 using Auth0.
 
 **Big Data**
 -	Significantly improved ingestion rate from Apache Spark to Apache Phoenix using Phoenix Spark connector.
--	Implemented Apache Spark using EMR to reduce invoice/CUR data for web app consumption.
+-	Wrote C# Apache Spark application running on EMR to reduce Cost and Usage (CUR) data.
 -	Launched Apache Phoenix and Apache HBase on EMR to serve invoice data to web application.
 
 **Cloud**
@@ -186,6 +216,14 @@ CloudSaver, Inc (May 2021 – December 2021)
 -	Launched and configured OpenVPN Access Server.
 -	Moved WordPress from ECS Fargate to ECS EC2 to enable faster throughput by connecting it to NFS server backed by EBS.
 -	Moved Learning team site to Amazon Lightsail due to storage limit in Azure Static Web App.
+- Initialized ASP.NET session database in AWS RDS for SQL Server (web edition) to improve compatibility.
+- Resolved issue with disabled AWS SES due to high email bounce rate.
+- Re-configured AWS VPC network from VPC peerings to hub and spoke model using Transit Gateway.
+- Setup Content Delivery Network (CDN) using Amazon CloudFront and S3.
+- Created static website in Amazon S3 and Amazon CloudFront for Learning team.
+- Automated copy and bootstrap of Aurora MySQL database to lower environment using EventBridge and Lambda.
+- Ran Hangfire as ECS Service and added capability to launch ECS tasks.
+- Adopted IaC by launching and importing resources using CloudFormation templates.
 -	Containerized and ran batch applications on ECS Fargate to improve scalability and reduce cost.
 
 **DevOps**
@@ -195,27 +233,45 @@ CloudSaver, Inc (May 2021 – December 2021)
 -	Installed RDS Combined CA bundle to enable SSL to Aurora MySQL on various resources (Docker, EC2, etc.).
 -	Migrated source/version control technology from TFVC to Git.
 
-**Monitoring**
+**Miscellaneous**
+- Initiated and led weekly team meeting.
+- Initiated and led bi-weekly architecture meeting.
+- Setup and maintained Microsoft SharePoint for department information sharing.
 -	Implemented Datadog APM for CloudSaver applications on EC2.
 -	Replaced Datadog with Dynatrace for CloudSaver applications on EC2 due to APM for .NET was not ready.
 
 **Programming**
--	Configured CloudSaver web application to use in proc session state to fix issue with incompatibility with Aurora.
--	Upgraded batch applications from .NET 4.6.2 to .NET 5 (with AWS SDK for .NET Core).
+-	Configured CloudSaver web application to use in proc session state to fix issue with incompatibility with Aurora MySQL.
+-	Upgraded batch applications from .NET 4.6.2 to .NET 5, containerized and run in ECS Fargate.
 -	Upgraded shared library from .NET 4.6.2 to .NET Standard 2.0.
--	Created a simple web application using Node.js and VS Code to host temporary Learning courses.
+-	Created a simple web application using Node.js and VS Code to host temporary learning courses.
 -	Used Handlebar.NET to map database bootstrap script with data from AWS secrets manager.
 -	Decoupled shared code from batch applications by moving it to a Nuget package.
 -	Resolved issue with TLS 1.2 between newer Linux kernel and MySQL by re-enabling older cipher suites.
 -	Wrote EC2 rightsizing scripts requested by client in Bash and PowerShell.
 
 **Consultant**\
-CloudSaver Inc. (August 2019 – May 2021)
+CloudSaver, Inc. (August 2019 – May 2021)
+
+**Auth**
+- Built integration with Okta, Ping Identity, OneLogin to enable SAML 2.0 SSO.
+- Moved custom Sustainsys SAML 2.0 logic from HttpModule to OWIN Middleware.
+- Setup Microsoft Active Directory.
+- Enabled Cloudsaver app to authenticate against Microsoft AD.
 
 **Cloud**
+- Programmatically installed and configured CloudWatch agent using AWS Systems Manager (SSM).
+- Used AWS API Gateway and Lambda to provide endpoints to store metadata for CloudSaver bundling and compression engine.
+- Automated Amazon EC2 virtualization type conversion from PV to HVM.
+- Installed ENA module and NVMe driver programmatically via AWS System Manager (SSM) for Zen to Nitro conversion.
+- Saved on SSL certificate cost by using AWS Certificate Manager (ACM).
 -	Designed and performed Amazon S3 Bundling PoC for client.
 -	Automated creation and sharing of AMI Golden Image with partner.
+- Launched NAT Gateway to workaround Elastic IP (EIP) limit.
+- Automated benchmarking of EC2 using Aida 64 and Geekbench on custom AMI.
 -	Configured Site-to-Site VPN to client environment.
+- Setup automatic security patching using AWS SSM Patch Manager
+- Setup automatic agents update using AWS SSM State Manager.
 - Implemented EBS Safety Net feature using Amazon CloudWatch alarms and Amazon SNS.
 -	Automated benchmarking of EC2 using Aida 64 and Geekbench with custom AMI.
 
@@ -223,29 +279,98 @@ CloudSaver Inc. (August 2019 – May 2021)
 -	Created SQL Server stored procedure with Table-Valued Parameters to generate complex reports.
 -	Improved EF batch insert performance by utilizing SqlBulkCopy.
 -	Enabled consistent database schema migrations using EF 6 (Entity Framework) Migrations.
+- Moved Hangfire database from SQL Server to Amazon Aurora Serverless.
+- Moved critical data from SQL Server to Amazon Aurora Serverless.
 -	Set up Amazon DocumentDB as a storage to store status and configuration for batch applications.
 -	Implemented Elasticsearch to store and improve query speed of AWS CUR/Invoice data.
 
 **DevOps**
 -	Implemented CI/CD pipelines using Azure DevOps and AWS CodeDeploy with deployment to EC2 and Lambda.
+- Designed and applied Azure DevOps building and deployment steps.
+- Troubleshot phantom TFS workspace.
+- Setup Kanban board, design and document development process in Azure DevOps.
+
+**Graphic**
+- Added emboss effect on CloudSaver logo using Adobe Illustrator.
+- Edited promotional video using After Effect and Quick Time.
+- Assisted in creating and editing of CloudSaver assessment instruction video using Movavi.
+- Blurred sensitive information in CloudSaver instruction videos using Adobe Premier Element.
+
+**System**
+- Wrote code and scripts to automatically migrate EC2 in Xen hypervisor to Nitro-based hypervisor.
+- Automated EBS cost saving by writing scripts to setup and move data to smaller EBS volumes.
+- Map disk drives and partitions to EBS volumes using PowerShell and Shell script.
+- Created mirror (Raid 1) on EBS using PowerShell and Diskpart.
+- Created script to create, attach, initialize, part and format EBS volumes.
+- Automated benchmarking by programmatically run AIDA64 on various EC2 using AWS Systems Manager (SSM).
+- Hosted private Nuget server in EC2.
+- Developed feature to bundle files and extract a single file by querying the byte range in S3.
+- Wrote script to replace device name with UUID in fstab to migrate Amazon EC2 to Nitro-based instance type.
+- Installed and renewed SSL certificates in IIS.
+- Disabled deprecated SSL and TLS versions/protocols on Windows Servers via PowerShell.
+- Disabled weak encryption protocols/cipher suites on Windows Servers.
+- Configured OpenVPN access server to allow VPN connection to test account VPC.
+- Wrote script to automatically fix Linux kernel update failure.
+- Troubleshot URL Rewrite on IIS.
 
 **Programming**
+- Created .NET generic classes to simplify retrieving multiple metrics from CloudWatch.
+- Created .NET extension methods to sort enumerables by attribute and property name using reflection.
 -	Implemented drag and drop report filter with level indentation.
+- Added custom tooltip on HTML tables using Tooltipster.
+- Created custom HTML tables with frozen top, bottom, and first column using CSS.
+- Added custom scrollbar using mCustomScrollbar.
+- Created various reports in PDF and Excel using TallPDF, EPPlus, and Highcharts.
+- Implemented background process queueing and scheduling using Hangfire to decouple front end and back end.
+- Created custom .NET attributes to improve code efficiency.
+- Worked around template formatting bug in Salesforce CPQ by utilizing knowledge in Apache FOP.
+- Developed ASP.NET Core Web API to compress file using LZMA and hosted it in Ubuntu using NGINX.
+- Created .NET SDK for CloudSaver compression engine.
+- Enabled OWIN on ASP.NET Web Forms.
+- Enabled ASP.NET Session on OWIN.
+- Solved race condition issue by implementing ServiceLocator pattern.
+- Moved some appsettings to environment variable for easier management and security.
+- Utilized TopShelf to install Hangfire as Windows Service.
+- Improved page response by asynchronously loading batched data using custom queue written in JavaScript.
+- Enabled CloudSaver web application to send email using Simple Mail Transfer Protocol (SMTP).
+-	Created a Razor page based internal web application to query New Relic API using GraphQL.
 -	Automated migration of previous generation Amazon EC2 with Xen hypervisor to newer AWS Nitro hypervisor:
     -	Converted instances from PV (Paravirtual) to HVM (Hardware Virtual Machine)
     -	Installed NVMe driver and ENA (Enhance Network Adapter) module on the instance
     -	Fixed fstab for Linux
--	Created a Razor page based internal web application to query New Relic API using GraphQL.
+- Developed CloudSaver iOS app using Swift and XCode.
 -	Automated moving of data to smaller AWS EBS volumes using shell script, PowerShell and AWS SSM for various OS.
--	Integrated SAML 2.0 SSO handling using Sustainsys/SAML2 library on CloudSaver web application for Okta, OneLogin and Ping Identity.
+-	Integrated Okta, OneLogin and Ping Identity SAML 2.0 SSO with CloudSaver app using Sustainsys/SAML2 library.
 
 **Web Application Developer**\
-WorkView, LLC. (August 2017 – August 2019)
--	Developed and released WorkView mobile app for iOS and Android with ASP.NET Web API backend.
--	Generated and scheduled reports in PDF using Tallcomponents TallPDF.NET and in Excel with embedded macro using EPPlus.
--	Added functionality to manage meetings and appointments using Exchange Web Services (EWS).
--	Created Gantt chart of projects and tasks programmatically using DayPilot Gantt.
--	Automated file copying after code compilation/build using MSBuild.
+WorkView, LLC (July 2017 – August 2019)
+
+
+- Enhanced Partner Portal ASP.NET Web Forms application.
+- Created windows console app to send out WorkView scheduled reports.
+- Added copy button to allow user to copy to clipboard using clipboard.js.
+- Created a scheduled report monitoring web application.
+- Added logic to extract text from html formatted string using HTML Agility Pack.
+- Handled Basecamp3 and Highcharts server rate limitation using custom DelegatingHandler.
+- Created various charts using Highcharts.
+- Added logic to react when browser tab is visible/invisible using Page Visibility API.
+- Added logic to validate URL using Regex.
+- Modified images/graphics using Photoshop.
+- Automated file copying after code compilation/build using MSBuild.,        
+- Troubleshot permissions in SQL Server.
+- Managed projects and versions in VSTS.
+- Explored jReport as part of reporting tools due diligence.
+- Implemented custom logger in ASP.NET Web API applications using log4net.
+- Wrote JavaScript query string parser.
+- Troubleshot partner company's issue using cURL.
+- Developed app to process scheduled reports.
+- Moved application error handler to a central location.
+- Installed Ubiquity ToughSwitch to enable multiple VoIP phones.
+- Developed and released WorkView mobile app for iOS and Android with ASP.NET Web API backend.
+- Generated scheduled reports in PDF (Tallcomponents TallPDF.NET) and in Excel with embedded macro (EPPlus).
+- Enabled import of projects and to-dos from Basecamp3 to WorkView.
+- Created Gantt chart of projects and tasks programmatically using DayPilot Gantt.
+- Added feature to manage meetings and appointments using Exchange Web Services (EWS).
 
 ## Education
 **Master of Science in Computer Science**\

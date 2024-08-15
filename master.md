@@ -70,7 +70,7 @@ Forever, Nodemon, Putty, RDP, SSH, WinSCP, WSL
 Azure DevOps, BitBucket, Git, GitHub, PVCS, Sourcetree, TFVC
 
 **Web**\
-ASP.NET (MVC, Razor Pages, Web Forms, Web API), Bootstrap, CSS, DataTables, Express.js, HTML, HTML Agility Pack (HAP), JavaScript, jQuery, Mantine, Next.js, Nginx, Node.js, Nuxt.js, OWIN, Orval, Postman, React, React router, React Bootstrap, REST, Serve, Silverlight, Swagger (Open API), Telerik UI, TypeScript, Vite, Vue.js, WCF, WordPress
+ASP.NET (MVC, Razor Pages, Web Forms, Web API), Bootstrap, CSS, DataTables, Express.js, HTML, HTML Agility Pack (HAP), JavaScript, jQuery, Mantine, Next.js, Nginx, Node.js, Nuxt.js, OWIN, Orval, Postman, React, ReactJS, React router, React Bootstrap, REST, Serve, Silverlight, Swagger (Open API), Telerik UI, TypeScript, Vite, Vue.js, WCF, WordPress
 
 ## Technical Certifications
 **AWS**\
@@ -113,7 +113,7 @@ FinOps Certified Engineer
 ## Work Experience
 {{ if .AfterJan2022 }}
 **Director of Cloud and DevOps (Cloud Ops Engineer)**\
-CloudSaver, Inc (January 2022 – Present)
+CloudSaver, Inc. (January 2022 – Present)
 {{- if not .Top5 }}
 
 **Cloud**
@@ -212,7 +212,7 @@ CloudSaver, Inc (January 2022 – Present)
 {{ if .AfterMay2021 }}
 
 **Software Engineer**\
-CloudSaver, Inc (May 2021 – December 2021)
+CloudSaver, Inc. (May 2021 – December 2021)
 {{- if not .Top5 }}
 
 **Auth**
@@ -279,7 +279,7 @@ CloudSaver, Inc (May 2021 – December 2021)
 {{ if .AfterAug2019 }}
 
 **Consultant**\
-CloudSaver Inc. (August 2019 – May 2021)
+CloudSaver, Inc. (August 2019 – May 2021)
 {{- if not .Top5 }}
 
 **Auth**
@@ -382,18 +382,17 @@ CloudSaver Inc. (August 2019 – May 2021)
 - Developed CloudSaver iOS app using Swift and XCode.
 {{- end }}
 -	Automated moving of data to smaller AWS EBS volumes using shell script, PowerShell and AWS SSM for various OS.
--	Integrated SAML 2.0 SSO handling using Sustainsys/SAML2 library on CloudSaver web application for Okta, OneLogin and Ping Identity.
+-	Integrated Okta, OneLogin and Ping Identity SAML 2.0 SSO with CloudSaver app using Sustainsys/SAML2 library.
 {{- end -}}
 {{ if .AfterAug2017 }}
 
 **Web Application Developer**\
-WorkView, LLC. (August 2017 – August 2019)
-- Developed and released WorkView mobile app for iOS and Android with ASP.NET Web API backend.
+WorkView, LLC (July 2017 – August 2019)
+{{- if not .Top5 }}
+
+
 - Enhanced Partner Portal ASP.NET Web Forms application.
 - Created windows console app to send out WorkView scheduled reports.
-- Wrote code to export reports in PDF with Tallcomponent TallPDF.NET and in Excel with embedded macro with EPPlus.
-- Enabled import of projects and to-dos from Basecamp3 to WorkView.
-- Created Gantt chart of projects and tasks programmatically using DayPilot Gantt.
 - Added copy button to allow user to copy to clipboard using clipboard.js.
 - Created a scheduled report monitoring web application.
 - Added logic to extract text from html formatted string using HTML Agility Pack.
@@ -407,12 +406,17 @@ WorkView, LLC. (August 2017 – August 2019)
 - Managed projects and versions in VSTS.
 - Explored jReport as part of reporting tools due diligence.
 - Implemented custom logger in ASP.NET Web API applications using log4net.
-- Added feature to manage meetings and appointments using Exchange Web Services (EWS).
 - Wrote JavaScript query string parser.
 - Troubleshot partner company's issue using cURL.
 - Developed app to process scheduled reports.
 - Moved application error handler to a central location.
 - Installed Ubiquity ToughSwitch to enable multiple VoIP phones.
+{{- end}}
+- Developed and released WorkView mobile app for iOS and Android with ASP.NET Web API backend.
+- Generated scheduled reports in PDF (Tallcomponents TallPDF.NET) and in Excel with embedded macro (EPPlus).
+- Enabled import of projects and to-dos from Basecamp3 to WorkView.
+- Created Gantt chart of projects and tasks programmatically using DayPilot Gantt.
+- Added feature to manage meetings and appointments using Exchange Web Services (EWS).
 {{- end -}}
 {{ if .AfterAug2012 }}
 
@@ -447,17 +451,20 @@ Envision, Inc. through Labor Finders (July 2011 – August 2012)
 -	Synchronized data in Microsoft Access with SQL Server using Windows Service.
 - Generated requested reports for supervisors and managers by using Crystal Report.
 - Deployed custom MRP application using ClickOnce technology.
+- Created dynamic charts by utilizing MS (.NET) Chart Control.
+- Create a small tool using WPF to keep track of manufactured products.
 {{- end -}}
 {{ if .AfterAug2008 }}
 
 **Graduate Research Assistant**\
 Finance, Real Estate & Decision Sciences Department at WSU (August 2008 – May 2011)
--	Queried real estate data from RETS compliance network servers using SQL via ODBC connection.
+-	Queried real estate data from RETS compliance servers from STATA via ODBC connection (ezRETS driver).
 -	Developed statistical analysis programs using STATA to analyze periodic real estate data.
 -	Automated reports generation in Microsoft Excel by writing macros in VBA.
 - Generated monthly reports to be delivered to 24 Kansas area real estate boards.
 - Shortened reports creation time from 1 week to 3 days through automated process.
-- Found and reported bug on RETS ODBC driver
+- Found and reported bug on RETS ODBC driver.
+- Integrated real estate data from individual MLS into statewide data.
 {{ end }}
 
 ## Education

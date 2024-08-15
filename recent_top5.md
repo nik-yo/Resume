@@ -70,7 +70,7 @@ Forever, Nodemon, Putty, RDP, SSH, WinSCP, WSL
 Azure DevOps, BitBucket, Git, GitHub, PVCS, Sourcetree, TFVC
 
 **Web**\
-ASP.NET (MVC, Razor Pages, Web Forms, Web API), Bootstrap, CSS, DataTables, Express.js, HTML, HTML Agility Pack (HAP), JavaScript, jQuery, Mantine, Next.js, Nginx, Node.js, Nuxt.js, OWIN, Orval, Postman, React, React router, React Bootstrap, REST, Serve, Silverlight, Swagger (Open API), Telerik UI, TypeScript, Vite, Vue.js, WCF, WordPress
+ASP.NET (MVC, Razor Pages, Web Forms, Web API), Bootstrap, CSS, DataTables, Express.js, HTML, HTML Agility Pack (HAP), JavaScript, jQuery, Mantine, Next.js, Nginx, Node.js, Nuxt.js, OWIN, Orval, Postman, React, ReactJS, React router, React Bootstrap, REST, Serve, Silverlight, Swagger (Open API), Telerik UI, TypeScript, Vite, Vue.js, WCF, WordPress
 
 ## Technical Certifications
 **AWS**\
@@ -113,36 +113,36 @@ FinOps Certified Engineer
 ## Work Experience
 
 **Director of Cloud and DevOps (Cloud Ops Engineer)**\
-CloudSaver, Inc (January 2022 – Present)
+CloudSaver, Inc. (January 2022 – Present)
 -	Saved $15,000/week by moving CUR ingestion from EKS Fargate to EKS Nodegroup in public subnet.
--	Bypassed API Gateway 10 MB limit using CloudFront with custom OAuth 2.0 authorizer written in Python (with pyJwt) running on Lambda@Edge.
+-	Bypassed API Gateway 10 MB limit using CloudFront with Python (with pyJwt) custom authorizer running on Lambda@Edge.
 -	Created dynamic Kubernetes workers deployment per Kafka topic using Helm, jq, and yq so workers can be scaled independently.
--	Scheduled pipeline that automatically runs C# script (csx) to pull Azure resource metadata, commit, push, and create Pull Request.
+-	Scheduled pipeline that automatically runs C# script (csx), commit, push, and create Pull Request.
 -	Developed a web page on CloudSaver app to enable self-configure SSO using React and ASP.NET Web API backend.
 
 **Software Engineer**\
-CloudSaver, Inc (May 2021 – December 2021)
+CloudSaver, Inc. (May 2021 – December 2021)
 -	Updated from built-in authentication to OpenID and OAuth 2.0 using Auth0.
--	Implemented Apache Spark using EMR to reduce invoice/CUR data for web app consumption.
+-	Wrote C# Apache Spark application running on EMR to reduce Cost and Usage (CUR) data.
 -	Launched Apache Phoenix and Apache HBase on EMR to serve invoice data to web application.
 -	Containerized and ran batch applications on ECS Fargate to improve scalability and reduce cost.
 -	Wrote EC2 rightsizing scripts requested by client in Bash and PowerShell.
 
 **Consultant**\
-CloudSaver Inc. (August 2019 – May 2021)
+CloudSaver, Inc. (August 2019 – May 2021)
 - Implemented EBS Safety Net feature using Amazon CloudWatch alarms and Amazon SNS.
 -	Automated benchmarking of EC2 using Aida 64 and Geekbench with custom AMI.
 -	Implemented Elasticsearch to store and improve query speed of AWS CUR/Invoice data.
 -	Automated moving of data to smaller AWS EBS volumes using shell script, PowerShell and AWS SSM for various OS.
--	Integrated SAML 2.0 SSO handling using Sustainsys/SAML2 library on CloudSaver web application for Okta, OneLogin and Ping Identity.
+-	Integrated Okta, OneLogin and Ping Identity SAML 2.0 SSO with CloudSaver app using Sustainsys/SAML2 library.
 
 **Web Application Developer**\
-WorkView, LLC. (August 2017 – August 2019)
--	Developed and released WorkView mobile app for iOS and Android with ASP.NET Web API backend.
--	Generated and scheduled reports in PDF using Tallcomponents TallPDF.NET and in Excel with embedded macro using EPPlus.
--	Added functionality to manage meetings and appointments using Exchange Web Services (EWS).
--	Created Gantt chart of projects and tasks programmatically using DayPilot Gantt.
--	Automated file copying after code compilation/build using MSBuild.
+WorkView, LLC (July 2017 – August 2019)
+- Developed and released WorkView mobile app for iOS and Android with ASP.NET Web API backend.
+- Generated scheduled reports in PDF (Tallcomponents TallPDF.NET) and in Excel with embedded macro (EPPlus).
+- Enabled import of projects and to-dos from Basecamp3 to WorkView.
+- Created Gantt chart of projects and tasks programmatically using DayPilot Gantt.
+- Added feature to manage meetings and appointments using Exchange Web Services (EWS).
 
 ## Education
 **Master of Science in Computer Science**\
