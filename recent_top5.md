@@ -117,8 +117,8 @@ CloudSaver, Inc. (January 2022 – Present)
 -	Saved $15,000/week by moving CUR ingestion from EKS Fargate to EKS Nodegroup in public subnet.
 -	Bypassed API Gateway 10 MB limit using CloudFront with Python (with pyJwt) custom authorizer running on Lambda@Edge.
 -	Created dynamic Kubernetes workers deployment per Kafka topic using Helm, jq, and yq so workers can be scaled independently.
--	Scheduled pipeline that automatically runs C# script (csx), commit, push, and create Pull Request.
 -	Developed a web page on CloudSaver app to enable self-configure SSO using React and ASP.NET Web API backend.
+- Developed CLI to integrate CSP with app using Python, Click, and setuptools.
 
 **Software Engineer**\
 CloudSaver, Inc. (May 2021 – December 2021)

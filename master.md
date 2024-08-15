@@ -161,7 +161,6 @@ CloudSaver, Inc. (January 2022 – Present)
 - Optimized build time by building front and backend in parallel.
 {{- end }}
 -	Created dynamic Kubernetes workers deployment per Kafka topic using Helm, jq, and yq so workers can be scaled independently.
--	Scheduled pipeline that automatically runs C# script (csx), commit, push, and create Pull Request.
 {{- if not .Top5 }}
 
 **Programming**
@@ -172,8 +171,10 @@ CloudSaver, Inc. (January 2022 – Present)
 -	Update Visual Studio Extension to encrypt/decrypt value with DialogWindow, ToolWindow, and WPF.
 -	Saved $7,000/week by refactoring .NET 7 application to run on Linux ECS container.
 - Debugged running .NET 7 application using Visual Studio remote debugger.
+
 {{- end }}
 -	Developed a web page on CloudSaver app to enable self-configure SSO using React and ASP.NET Web API backend.
+- Developed CLI to integrate CSP with app using Python, Click, and setuptools.
 {{- if not .Top5 }}
 
 **System**
@@ -389,7 +390,6 @@ CloudSaver, Inc. (August 2019 – May 2021)
 **Web Application Developer**\
 WorkView, LLC (July 2017 – August 2019)
 {{- if not .Top5 }}
-
 
 - Enhanced Partner Portal ASP.NET Web Forms application.
 - Created windows console app to send out WorkView scheduled reports.
