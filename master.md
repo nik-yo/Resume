@@ -4,34 +4,48 @@ nik_yodo@yahoo.com | https://www.nikkiyodo.com/
 
 https://www.linkedin.com/in/nikkiyodo/ | https://github.com/nik-yo/ 
 
-https://nikkis-lunch.blogspot.com/
+https://blog.nikkiyodo.com
 
 Overland Park, KS 66210 | (316) 993-9775
 
 
 ## Work Experience
 
+{{ if .AfterJan2025 }}
+**Senior Consultant**
+Integrity Inspired Solutions (Jan 2025 - Present)
+
+- Build a CLI tool that saves each developer 15 minutes per local app run.
+- Rewrite copy process using AI, reducing runtime from timeout to 6 seconds across 200 modules.
+- Lead development of a NuGet package with CI/CD pipeline, unit and integration tests, and resiliency testing, delivered within  3 weeks.
+- Simplify the local app launch process from 17 steps to 5.
+- Troubleshoot TimeZoneInfo discrepancies between Windows (local) and Linux (Kubernetes via Podman and .NET Aspire) environments.
+- Integrate Jira with GitLab to surface Merge Request links directly in Jira tickets, improving visibility for developers.
+- Develop a randomizer for TPO using Office Script.
+- Resolve a memory issue in binary streaming, reducing memory usage by over 90%.
+{{- end }}
+
 {{ if .AfterJan2022 }}
 **Director of Cloud and DevOps (Hands-on Cloud Ops Engineer)**\
-CloudSaver, Inc. (Jan 2022 – Present)
+CloudSaver, Inc. (Jan 2022 – December 2024)
 
-- Managed a team of two, completing an average of 27 tickets weekly for a total of 2,134 tickets in 1.5 years.
+- Managed a team of two, completing an average of 27 tickets weekly for a total of 2,134 tickets over 1.5 years.
 
 {{- if or (eq .Role "CloudEngineer") (eq .Role "SolutionArchitect") }}
-- Revamp AWS's CUR (Cost and Usage Report) ingestion process using EKS Nodegroup, saving $780,000 annually in NAT Gateway data processing costs.
-- Implement autoscaling for a WordPress site to handle 25,000 concurrent connections per marketing requirements.
-- Launched and maintained a large-scale microservice-based SaaS platform with 25 cloud resources across 5 environments, achieving 99.99% uptime since inception.
+- Revamped AWS's CUR (Cost and Usage Report) ingestion process using an EKS Nodegroup, saving $780,000 annually in NAT Gateway data processing costs.
+- Implemented autoscaling for a WordPress site to support 25,000 concurrent connections per marketing requirements.
+- Launched and maintained a large-scale, microservice-based SaaS platform spanning 25 cloud resources across 5 environments, achieving 99.99% uptime since inception.
 {{- end }}
 
 {{- if eq .Role "DevOpsEngineer" }}
-- Cut costs by 70% through self-hosting Azure DevOps agents in AWS.
-- Enhance performance by 100x and cut operational costs by 96% through configuring CI/CD pipelines for dynamic deployment and independent scaling of Kubernetes pods per Kafka topic.
+- Cut costs by 70% by self-hosting Azure DevOps agents in AWS.
+- Improved performance by 100x and cut operational costs by 96% by configuring CI/CD pipelines for dynamic deployment and independent scaling of Kubernetes pods per Kafka topic.
 {{- end }}
 
 {{- if or (eq .Role "SoftwareEngineer") (eq .Role "MobileDev") }}
-- Implement CUR obfuscation process in EMR serverless with Python, achieving 96% cost reduction compared to EC2-based EMR cluster execution.
-- Save $360,000 annually by refactoring .NET 7 application to run in a Linux container, leveraging lower ECS Linux rates and improved performance.
-- Develop a React and ASP.NET-based web page for customer self-configuration of SAML 2.0 SSO, saving 3 weeks of meetings per customer.
+- Implemented a CUR obfuscation process in EMR Serverless with Python, achieving a 96% cost reduction compared to EC2-based EMR cluster execution.
+- Saved $360,000 annually by refactoring a .NET 7 application to run in a Linux container, leveraging lower ECS Linux rates and improved performance.
+- Developed a React and ASP.NET-based web page for customer self-configuration of SAML 2.0 SSO, saving 3 weeks of meetings per customer.
 {{- end }}
 
 {{- end }}
@@ -40,24 +54,24 @@ CloudSaver, Inc. (Jan 2022 – Present)
 **Software Engineer**\
 CloudSaver, Inc. (May 2021 - Dec 2021)
 
-- Led weekly team meeting and bi-weekly architecture meetings, enhancing Dev and QA collaboration, workload predictability, and reducing technical debts.
-- Developed ETL process using Apache Spark to Apache Phoenix (HBase), reducing CUR ingestion time by 92% from over 24 hours to under 2 hours.
-- Upgraded batch applications to .NET 5, containerized them for ECS Fargate launch, enabling scaling to 1,000 concurrent executions.
+- Led weekly team meetings and bi-weekly architecture meetings, improving Dev and QA collaboration, workload predictability, and reducing technical debt.
+- Developed an ETL process from Apache Spark to Apache Phoenix (HBase), reducing CUR ingestion time by 92%, from over 24 hours to under 2 hours.
+- Upgraded batch applications to .NET 5 and containerized them for ECS Fargate, enabling scaling to 1,000 concurrent executions.
 {{- end }}
 
 {{ if .AfterAug2019 }}
 **Consultant**\
 CloudSaver, Inc. (Aug 2019 - May 2021)
 
-- Automated the build and deployment process by implementing a CI/CD pipeline, reducing errors and accelerating release speed from 4 hours to just 10 minutes—a 96% improvement.
-- Streamlined the automation of Xen to Nitro EC2 instances conversion, achieving an 83% conversion speed increase per instance.
-- Migrated 2TB and 2000 million rows of data from MySQL to Elasticsearch, reducing query latency and securing two major clients with an annual revenue of $6.5 million.
+- Automated the build and deployment process by implementing a CI/CD pipeline, reducing errors and cutting release time from 4 hours to 10 minutes, a 96% improvement.
+- Streamlined automation of Xen-to-Nitro EC2 instance conversion, achieving an 83% increase in conversion speed per instance.
+- Migrated 2TB and 2 billion rows of data from MySQL to Elasticsearch, reducing query latency and securing two major clients representing $6.5 million in annual revenue.
 {{- end }}
 
 {{ if .AfterJul2017 }}
 **Web Application Developer**\
 WorkView, LLC (Jul 2017 - Aug 2019)
-- Delivered Android and iOS apps with an ASP.NET Web API backend in 6 months, completing an overdue iOS project stalled for 9 months.
+- Delivered Android and iOS apps with an ASP.NET Web API backend in 6 months, completing an iOS project that had been stalled for 9 months.
 - Developed in-house applications for report generation, saving the company $60,000 annually.
 {{- end }}
 

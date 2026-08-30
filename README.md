@@ -1,5 +1,43 @@
+# Master Resume
 
-# Calculation
+This repo holds a single **master resume** (`master.md`) that generates multiple **targeted, role-specific resumes** from one source of truth, instead of maintaining several resume files by hand.
+
+`master.md` is written as a [Go `text/template`](https://pkg.go.dev/text/template). Work history, skills, and certifications are wrapped in conditional blocks so the same document can be filtered two ways:
+
+- **By role** — e.g. `{{ if eq .Role "CloudEngineer" }} ... {{- end }}` includes bullets, skills, and certificates relevant to that target role and omits the rest.
+- **By recency** — e.g. `{{ if .AfterJan2022 }} ... {{- end }}` includes older roles only while they still fall within the desired lookback window, so the resume can be trimmed as experience ages.
+
+## Files
+
+| File | Purpose |
+| --- | --- |
+| `master.md` | The master resume source. Edit this — it's the single source of truth. |
+| `generate.go` | Renders `master.md` once per target role and writes each result to `out/`. |
+| `out/resume-<Role>.md` | Generated, role-targeted resumes. Not source of truth — regenerated from `master.md`, don't hand-edit. |
+| `script.ps1` | Convenience commands: regenerate via `go run generate.go`, plus a Pandoc example for Markdown → PDF conversion. |
+| `README.md` | This file, plus the metric calculations below that back up the numbers used in `master.md`. |
+
+## Usage
+
+1. Edit `master.md` — update experience, skills, or metrics, wrapping role- or date-specific content in the appropriate template conditionals.
+2. If you add or change a quantified claim (cost savings, performance gains, uptime, etc.), add or update its supporting math in the **Metric Calculations** section below so every number in the resume stays traceable.
+3. Regenerate the targeted resumes:
+   ```
+   go run generate.go
+   ```
+4. Convert a generated resume to PDF if needed (the VS Code Pandoc extension is recommended over the raw CLI for styling):
+   ```
+   pandoc -f markdown -t pdf out/resume-CloudEngineer.md -o resume.pdf
+   ```
+
+### Adding a new target role
+
+1. In `master.md`, add `{{- if eq .Role "NewRole" }} ... {{- end }}` blocks wherever content should differ for that role.
+2. In `generate.go`'s `main()`, add a generation pass for the new role so it gets its own `out/resume-<Role>.md`.
+
+## Metric Calculations
+
+The math behind the quantified claims used throughout `master.md`, kept here so every number in the resume is traceable back to its source.
 
 **Important Metrics**
 - Cost savings
