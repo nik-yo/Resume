@@ -2,35 +2,25 @@
 
 This repo holds a single **master resume** (`master.md`), the one source of truth for a general resume that covers cloud, DevOps, and software engineering.
 
-`master.md` is written as a [Go `text/template`](https://pkg.go.dev/text/template). Conditional blocks filter it two ways:
-
-- **By recency**: e.g. `{{ if .AfterJan2022 }} ... {{- end }}` includes older jobs only while they still fall within the desired lookback window, so the resume can be trimmed as experience ages.
-- **Optional extras**: `{{ if .IncludeOtherCert }} ... {{- end }}` holds lower-level and older certificates that are left out by default.
+`master.md` is plain Markdown. Edit it directly and convert it to PDF or Word as needed.
 
 ## Files
 
 | File | Purpose |
 | --- | --- |
-| `master.md` | The master resume source. Edit this — it's the single source of truth. |
-| `generate.go` | Renders `master.md` and writes the result to `out/`. |
-| `out/resume-*.md` | Generated resumes. Not source of truth — regenerated from `master.md`, don't hand-edit. |
-| `script.ps1` | Convenience commands: regenerate via `go run generate.go`, plus a Pandoc example for Markdown → PDF conversion. |
+| `master.md` | The master resume. Edit this — it's the single source of truth. |
 | `README.md` | This file, plus the metric calculations below that back up the numbers used in `master.md`. |
+| `script.ps1` | Convenience commands, including a Pandoc example for Markdown → PDF conversion. |
+| `generate.go`, `out/` | Legacy Go template generator and its output. Not used while `master.md` is plain Markdown; `out/` may be stale. |
 
 ## Usage
 
-1. Edit `master.md` — update experience, skills, or metrics, wrapping date-specific content in the appropriate template conditionals.
+1. Edit `master.md` — update experience, skills, or certifications.
 2. If you add or change a quantified claim (cost savings, performance gains, uptime, etc.), add or update its supporting math in the **Metric Calculations** section below so every number in the resume stays traceable.
-3. Regenerate the resume:
+3. Convert to PDF if needed (the VS Code Pandoc extension is recommended over the raw CLI for styling):
    ```
-   go run generate.go
+   pandoc -f markdown -t pdf master.md -o resume.pdf
    ```
-4. Convert the generated resume to PDF if needed (the VS Code Pandoc extension is recommended over the raw CLI for styling):
-   ```
-   pandoc -f markdown -t pdf out/resume-CloudEngineer.md -o resume.pdf
-   ```
-
-> **Note:** `generate.go` still renders once per legacy role (`CloudEngineer`, `DevOpsEngineer`, `SoftwareEngineer`). Since `master.md` no longer has role conditionals, all three outputs are identical — use any one of them.
 
 ## Metric Calculations
 
@@ -68,6 +58,9 @@ one pod subscribes to 100 topics instead of only 1 which means processes compete
 
 **96% of pod operational cost savings** \
 without dynamic scaling, 80 partitions on most active topic x 100 topics = 8000 equivalent capacity. Most topic don't require that much capacity. Dynamic scaling is 80 + (99 x 2) = 278. 278/8000 = 96.5% in saving.
+
+**Legacy redundancy removal savings** \
+$10k/month x 12 months/year = $120k/year
 
 **.NET 7 refactoring savings** \
 350k cheaper:

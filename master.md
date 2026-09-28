@@ -8,65 +8,48 @@ https://blog.nikkiyodo.com
 
 Overland Park, KS 66210 | (316) 993-9775
 
-
 ## Work Experience
 
-{{ if .AfterJan2025 }}
-**Senior Consultant**
+**Senior Consultant**\
 Integrity Inspired Solutions (Jan 2025 - Present)
 
-- Build a CLI tool that saves each developer 15 minutes per local app run.
-- Rewrite copy process using AI, reducing runtime from timeout to 6 seconds across 200 modules.
-- Lead development of a NuGet package with CI/CD pipeline, unit and integration tests, and resiliency testing, delivered within 3 weeks.
-- Simplify the local app launch process from 17 steps to 5.
-- Troubleshoot TimeZoneInfo discrepancies between Windows (local) and Linux (Kubernetes via Podman and .NET Aspire) environments.
-- Integrate Jira with GitLab to surface Merge Request links directly in Jira tickets, improving visibility for developers.
-- Develop a randomizer for TPO using Office Script.
+- Rewrite a data copy process using AI, reducing runtime from timeout to 6 seconds across 200 modules.
 - Resolve a memory issue in binary streaming, reducing memory usage by over 90%.
-{{- end }}
+- Lead development of a NuGet package with CI/CD pipeline, unit and integration tests, and resiliency testing, delivered within 3 weeks.
+- Streamline local development by reducing app launch from 17 steps to 5 and building a CLI tool that saves each developer 15 minutes per run.
+- Build an Angular micro-frontend with Native Federation, with end-to-end tests in Cypress and Playwright.
 
-{{ if .AfterJan2022 }}
 **Director of Cloud and DevOps (Hands-on Cloud Ops Engineer)**\
 CloudSaver, Inc. (Jan 2022 – December 2024)
 
-- Managed a team of two, completing an average of 27 tickets weekly for a total of 2,134 tickets over 1.5 years.
-- Revamped AWS's CUR (Cost and Usage Report) ingestion process using an EKS Nodegroup, saving $780,000 annually in NAT Gateway data processing costs.
-- Implemented autoscaling for a WordPress site to support 25,000 concurrent connections per marketing requirements.
-- Launched and maintained a large-scale, microservice-based SaaS platform spanning 25 cloud resources across 5 environments, achieving 99.99% uptime since inception.
-- Cut costs by 70% by self-hosting Azure DevOps agents in AWS.
-- Improved performance by 100x and cut operational costs by 96% by configuring CI/CD pipelines for dynamic deployment and independent scaling of Kubernetes pods per Kafka topic.
-- Implemented a CUR obfuscation process in EMR Serverless with Python, achieving a 96% cost reduction compared to EC2-based EMR cluster execution.
+- Led a team of two to launch and operate a microservice-based SaaS platform on AWS commercial and GovCloud across 5 environments with 99.99% uptime, completing 2,100+ tickets in 1.5 years.
+- Revamped AWS CUR (Cost and Usage Report) ingestion by moving from EKS Fargate to an EKS Nodegroup, saving $780,000 annually in NAT Gateway data processing costs.
 - Saved $360,000 annually by refactoring a .NET 7 application to run in a Linux container, leveraging lower ECS Linux rates and improved performance.
-- Developed a React and ASP.NET-based web page for customer self-configuration of SAML 2.0 SSO, saving 3 weeks of meetings per customer.
-{{- end }}
+- Saved $120,000 annually by removing redundant infrastructure from a legacy application.
 
-{{ if .AfterMay2021 }}
 **Software Engineer**\
 CloudSaver, Inc. (May 2021 - Dec 2021)
 
-- Led weekly team meetings and bi-weekly architecture meetings, improving Dev and QA collaboration, workload predictability, and reducing technical debt.
 - Developed an ETL process from Apache Spark to Apache Phoenix (HBase), reducing CUR ingestion time by 92%, from over 24 hours to under 2 hours.
 - Upgraded batch applications to .NET 5 and containerized them for ECS Fargate, enabling scaling to 1,000 concurrent executions.
-{{- end }}
+- Migrated authentication to OpenID Connect/OAuth 2.0 with Auth0 and set up SAML 2.0 SSO for enterprise clients using Okta, PingFederate, and Azure AD.
 
-{{ if .AfterAug2019 }}
 **Consultant**\
 CloudSaver, Inc. (Aug 2019 - May 2021)
 
+- Migrated 2TB and 2 billion rows of data from MySQL to Elasticsearch, reducing query latency and securing two major clients representing $6.5 million in annual revenue.
 - Automated the build and deployment process by implementing a CI/CD pipeline, reducing errors and cutting release time from 4 hours to 10 minutes, a 96% improvement.
 - Streamlined automation of Xen-to-Nitro EC2 instance conversion, achieving an 83% increase in conversion speed per instance.
-- Migrated 2TB and 2 billion rows of data from MySQL to Elasticsearch, reducing query latency and securing two major clients representing $6.5 million in annual revenue.
-{{- end }}
 
-{{ if .AfterJul2017 }}
 **Web Application Developer**\
 WorkView, LLC (Jul 2017 - Aug 2019)
+
 - Delivered Android and iOS apps with an ASP.NET Web API backend in 6 months, completing an iOS project that had been stalled for 9 months.
 - Developed in-house applications for report generation, saving the company $60,000 annually.
-{{- end }}
+- Built a Basecamp3 import integration with a custom rate-limit handler, letting customers migrate projects and to-dos into WorkView.
 
 ## Core Skills
-AWS, Azure, CLI, IaC, CloudFormation, CDK, Bicep, Docker, Helm, Kubernetes, CI/CD, Azure DevOps, Git, C#, .NET, Python, Golang, Java, Kotlin, Swift, C, C++, React, JavaScript, PowerShell, Bash, VS Code, MySql, Apache Kafka, Apache Spark, Datadog, Open Telemetry, Linux, Windows.
+C#, .NET, Python, JavaScript, Angular, React, Java, Kotlin, Swift, AWS, Azure, Kubernetes, Docker, CI/CD, Apache Kafka, Apache Spark, MySQL, Redis, MongoDB, OpenSearch, OAuth 2.0
 
 ## Education
 **Master of Science in Computer Science**\
@@ -136,7 +119,6 @@ Oracle
 **Google Cloud Certified Cloud Digital Leader**\
 Google
 
-{{ if .IncludeOtherCert }}
 **AWS Certified Solution Architect Associate**\
 AWS
 
@@ -169,4 +151,3 @@ Microsoft
 
 **Microsoft Technology Associates Database Administration Fundamentals**\
 Microsoft
-{{- end }}
